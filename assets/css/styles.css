@@ -24,9 +24,6 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
-main {
-  padding: 20px;
-}
 main .container {
   background-color: hsl(0, 0%, 100%);
   padding: 20px;
@@ -62,7 +59,11 @@ main .container #listItems li .question {
   border-bottom: 1px solid hsl(275, 100%, 97%);
   gap: 15px;
 }
-main .container #listItems li .question:hover {
+main .container #listItems li .question p {
+  color: hsl(292, 42%, 14%);
+  font-weight: 700;
+}
+main .container #listItems li .question:hover p {
   color: hsl(292, 16%, 49%);
 }
 main .container #listItems li .answer {
@@ -71,10 +72,16 @@ main .container #listItems li .answer {
   color: hsl(292, 16%, 49%);
   padding: 15px;
   display: none;
+  font-weight: 500;
 }
 main .container #listItems li .answer.open {
   display: block;
 }
 main .container #listItems li:last-child .question {
   border-bottom: none;
+}
+@media (max-width: 768px) {
+  main .container {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

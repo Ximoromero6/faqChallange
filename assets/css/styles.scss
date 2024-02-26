@@ -31,7 +31,6 @@ body {
 }
 
 main {
-  padding: 20px;
   .container {
     background-color: $White;
     padding: 20px;
@@ -66,8 +65,14 @@ main {
           color: $Dark_purple;
           border-bottom: 1px solid $Light_pink;
           gap: 15px;
+          p {
+            color: $Dark_purple;
+            font-weight: 700;
+          }
           &:hover {
-            color: $Grayish_purple;
+            p {
+              color: $Grayish_purple;
+            }
           }
         }
         .answer {
@@ -76,6 +81,7 @@ main {
           color: $Grayish_purple;
           padding: 15px;
           display: none;
+          font-weight: 500;
 
           &.open {
             display: block;
@@ -87,6 +93,10 @@ main {
           }
         }
       }
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px;
     }
   }
 }
