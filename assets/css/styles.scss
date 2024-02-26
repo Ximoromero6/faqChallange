@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$White: hsl(0, 0%, 100%);
+$Light_pink: hsl(275, 100%, 97%);
+$Grayish_purple: hsl(292, 16%, 49%);
+$Dark_purple: hsl(292, 42%, 14%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a:focus {
+  outline-color: $Grayish_purple;
+  outline-width: 2px;
+  outline-style: dashed;
+}
+
+body {
+  background-color: $Light_pink;
+  background-image: url("../images/background-pattern-desktop.svg");
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  font-family: "Work Sans", sans-serif;
+}
+
+main {
+  padding: 20px;
+  .container {
+    background-color: $White;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    top: 100px;
+    max-width: 610px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(47, 21, 51, 0.1) 0px 20px 25px -5px,
+      rgba(47, 21, 51, 0.04) 0px 10px 10px -5px;
+    .containerTitle {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 15px;
+      h1 {
+        font-size: 45px;
+        font-weight: 700;
+      }
+    }
+    #listItems {
+      li {
+        list-style: none;
+        .question {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          color: $Dark_purple;
+          border-bottom: 1px solid $Light_pink;
+          gap: 15px;
+          &:hover {
+            color: $Grayish_purple;
+          }
+        }
+        .answer {
+          font-size: 16px;
+          line-height: 22px;
+          color: $Grayish_purple;
+          padding: 15px;
+          display: none;
+
+          &.open {
+            display: block;
+          }
+        }
+        &:last-child {
+          .question {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
